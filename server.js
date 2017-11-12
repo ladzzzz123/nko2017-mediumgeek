@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.json());
 
-const url = 'https://medium.com/@' + (process.env.SLUG || 'dheerajhere') +'/latest?format=json';
 const allowedOrigin = process.env.ORIGIN || '*';
 
 app.get('/', (req, res) => {
@@ -20,6 +19,7 @@ app.get('/posts', (req, res, next) => {
 	if (req.method === 'OPTIONS') {
 		res.send();
 	} else {
+		const url = 'https://medium.com/@' + (req.query.slug || process.env.SLUG || 'dheerajhere') +'/latest?format=json';
 		request({url: url, method: 'GET'}, (err, res) => {
 			if (err) {
 				console.log('Error: ' + res.statusCode);
