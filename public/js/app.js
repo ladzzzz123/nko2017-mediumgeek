@@ -15,7 +15,7 @@ new Vue({
 		fetchStories: function () {
 			var self = this;
 			$.ajax({
-					url: 'http://localhost:3000/posts',
+					url: 'https://medium-posts-proxy.herokuapp.com/posts',
 					method: 'GET',
 					data: this.slug ? {slug: this.slug} : null
 					})
