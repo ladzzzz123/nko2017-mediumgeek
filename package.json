@@ -1,0 +1,11 @@
+{
+  "name": "medium-proxy",
+  "version": "1.0.0",
+  "description": "A proxy that allows javascript applications to fetch medium posts",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
