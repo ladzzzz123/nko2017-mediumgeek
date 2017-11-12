@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Things I write</title>	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+	<script src="js/app.js" defer></script>
+	<script src="js/medium.js" defer></script>
+</head>
+<body>
+	<div class="container" id="stories">
+
+	  <section class="panel">
+
+		<input type="text" placeholder="What's your Medium handle?" autofocus class="text-input" v-model="slug" v-on:keyup.enter="fetchStories">
+
+	  </section>
+
+	  <!-- list for holding our post details -->
+	  <ul class="list">
+
+		<li v-for="post in posts">
+
+		  <a v-bind:href="post.url"><h2>{{ post.headline }}</h2></a>
+		  <p>{{ post.subtitle }}</p>
+		  <span class="details"><span>&#128079;</span> {{ post.claps }}  &nbsp; &nbsp; &nbsp; &nbsp;  <span>&#128214;</span>{{ post.readingTime }}</span>
+
+		</li>
+
+	  </ul>
+
+	</div>
+</body>
+</html>

@@ -4,11 +4,14 @@ const bodyParser = require('body-parser');
 
 const app = express();
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '/public'));
 
 const allowedOrigin = process.env.ORIGIN || '*';
 
 app.get('/', (req, res) => {
-	res.send('Hi there! This is a proxy service that allows me to display my medium.com posts on the website.');
+	// res.send('Hi there! This is a proxy service that allows me to display my medium.com posts on the website.');
+	res.sendfile(__dirname + "/public/index.html");
+
 });
 
 app.get('/posts', (req, res, next) => {
