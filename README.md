@@ -4,9 +4,11 @@
 
 Medium Embedder allows you to display Medium articles on your website.
 
+![Screenshot](/screenshots/demo.png)
+
 It comes with the following -
-  - medium.js - A javascript parser for medium articles
-  - medium-proxy - A proxy service which can be deployed with a one-click
+  - medium.js - A javascript libary for parsing medium articles
+  - medium-proxy - A proxy service which can be deployed with one-click
   - a handful of customization options
 
 You can also:
