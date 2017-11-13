@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Things I write</title>	
+	<title>Things I've written</title>	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
 	<script src="js/app.js" defer></script>
 	<script src="js/medium.js" defer></script>
+	<script src="https://www.nodeknockout.com/entries/377-mediumgeek/vote.js" type="text/javascript"></script> 
 </head>
 <body>
 	<div class="container" id="stories">
-
+	<h1>Things I've written</h1>
 	  <section class="panel">
 
 		<input type="text" placeholder="What's your Medium handle?" autofocus class="text-input" v-model="slug" v-on:keyup.enter="fetchStories">
@@ -31,5 +32,6 @@
 	  </ul>
 
 	</div>
+	<!-- <footer>Handcrafted with &#128151; by <a href="https://twitter.com/dheerajhere" target="_blank"><span class="logo">Dheeraj Joshi</span></a></footer> -->
 </body>
 </html>
